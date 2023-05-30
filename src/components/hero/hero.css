@@ -1,5 +1,3 @@
-@use './variables.scss' as *;
-
 .hero{
     padding: 15px;
 }
@@ -43,5 +41,5 @@ h2{
 }
 
 span{
-    text-decoration: underline, #4ee1a0;
+    text-decoration: underline #4ee1a0;
 }
