@@ -1,7 +1,7 @@
 /* import React from 'react' */
 import Header from '../header/Header'
 import Hero from '../hero/Hero'
-import './container.scss'
+import './container.css'
 
 export const Container = () => {
   return (
