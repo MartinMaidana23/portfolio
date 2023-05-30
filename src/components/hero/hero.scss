@@ -1,0 +1,46 @@
+@use './variables.scss' as *;
+
+.hero{
+
+    padding: 15px;
+
+    .hello{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+
+        h2{
+            text-align: center;
+            font-weight: 700;
+            font-size: 35px;
+            margin: 0;
+
+            span{
+                text-decoration: underline $green;
+            }
+        }
+    }
+
+    .description{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        p{
+            text-align: center;
+            font-weight: 500;
+            font-size: 18px;
+            margin: 0;
+        }
+    }
+
+    .contact-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}

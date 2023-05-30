@@ -7,10 +7,9 @@ import eslintPlugin from 'vite-plugin-eslint';
 export default defineConfig({
   plugins: [
     react(),
-    sassPlugin(),
-    eslintPlugin({
-      include: ['./src/**/*.jsx', './src/**/*.js'],
-      exclude: ['node_modules/**']
-    })
+    sassPlugin()
+    
   ],
 })
+
+
