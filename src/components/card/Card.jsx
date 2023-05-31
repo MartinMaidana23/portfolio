@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from '../button/Button'
+import AnchorLink from '../anchorlink/AnchorLink'
 import './card.css'
 
 const Card = (props) => {
@@ -20,10 +20,10 @@ const Card = (props) => {
           </div>
           
         </div>
-        <div className="card__btn">
+        <div className="card__link">
             {
               btns.map(({text, whereTo})=>(
-                <Button text={text} whereTo={whereTo} />
+                <AnchorLink text={text} whereTo={whereTo} />
               ))
             }
           </div>

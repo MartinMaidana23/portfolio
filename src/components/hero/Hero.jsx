@@ -1,5 +1,5 @@
 /* import React from 'react' */
-import Button from '../button/Button'
+import AnchorLink from '../anchorlink/AnchorLink'
 import './hero.css'
 
 const Hero = () => {
@@ -14,8 +14,8 @@ const Hero = () => {
         <div className="description">
             <p>Based in Argentina, I’m a full stack developer passionate about building accessible web apps that users love.</p>
         </div>
-        <div className="contact-btn">
-            <Button
+        <div className="contact-link">
+            <AnchorLink
                 text='CONTACT ME'
                 whereTo='#contact'
             />

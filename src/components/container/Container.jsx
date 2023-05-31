@@ -1,4 +1,5 @@
 /* import React from 'react' */
+import Contact from '../contact/Contact'
 import Header from '../header/Header'
 import Hero from '../hero/Hero'
 import Projects from '../projects/Projects'
@@ -12,6 +13,7 @@ export const Container = () => {
         <Hero/>
         <Technologies/>
         <Projects/> 
+        <Contact/>
     </div>
   )
 }

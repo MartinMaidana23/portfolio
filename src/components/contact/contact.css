@@ -1,0 +1,29 @@
+.contact{
+    background-color: #242424;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact .title{
+    width: 90%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.contact .title h2 {
+    font-size: 40px;
+
+}
+
+.contact .title p {
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 26px;
+}
