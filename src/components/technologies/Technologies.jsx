@@ -5,6 +5,7 @@ import './technologies.css'
 
 const Technologies = () => {
   return (
+
     <div className='technologies'>
       {
         technologies.map(({ technology, exp }, index) => (
@@ -15,8 +16,7 @@ const Technologies = () => {
           />
         ))
       }
-    <hr/>
-
+      <hr/>
     </div>
 
   )

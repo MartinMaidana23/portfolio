@@ -5,7 +5,12 @@
     justify-content: center;
     gap: 20px;
     padding: 15px;
+    margin: 15px;
     width: 100%;
+}
+
+.technologies hr{
+    margin-top: 30px;
 }
 
 .technology{

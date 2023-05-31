@@ -4,7 +4,7 @@ import './hero.css'
 
 const Hero = () => {
   return (
-    <div className='hero'>
+    <div className='hero' id='aboutMe' >
 
         <div className="hello">
             <h2>Nice to meet you!</h2>
@@ -17,7 +17,7 @@ const Hero = () => {
         <div className="contact-btn">
             <Button
                 text='CONTACT ME'
-                direct='#contact'
+                whereTo='#contact'
             />
         </div>
         <hr />

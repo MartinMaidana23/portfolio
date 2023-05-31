@@ -2,10 +2,10 @@ import React from 'react'
 import './button.css'
 
 const Button = (props) => {
-    const {text, direct} = props
+    const {text, whereTo} = props
   return (
     <>
-        <button className='btn' ><a href={direct}></a>{text}</button>
+        <button className='btn' ><a href={whereTo}></a>{text}</button>
     </>
   )
 }
