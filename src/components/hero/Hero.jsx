@@ -1,10 +1,16 @@
 /* import React from 'react' */
 import AnchorLink from '../anchorlink/AnchorLink'
 import './hero.css'
+import foto from '../../assets/foto.png'
+
 
 const Hero = () => {
   return (
     <div className='hero' id='aboutMe' >
+
+        <div className="img__container">
+            <img src={foto} alt="" />
+        </div>
 
         <div className="hello">
             <h2>Nice to meet you!</h2>

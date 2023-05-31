@@ -6,9 +6,6 @@
     flex-direction: column;
     width: 50vw;
     gap: 20px;
-    background: rgb(36,36,36);
-    background: linear-gradient(0deg, rgba(36,36,36,1) 0%, rgba(36,36,36,0.01) 100%);
-    
 }
 
 h1{
@@ -20,9 +17,6 @@ h1{
     display: flex;
     width: 100%;
     justify-content: space-between;
-
-    
-
 }
 
 .link-socialMedia{
@@ -39,13 +33,4 @@ h1{
     color: #4ee1a0;
 } */
 
-.img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} 
 
-img{
-    width: 110%;
-    
-}

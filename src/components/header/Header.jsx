@@ -2,7 +2,6 @@
 import {AiFillGithub} from 'react-icons/ai'
 import {AiFillLinkedin} from 'react-icons/ai'
 import {IoLogoWhatsapp} from 'react-icons/io'
-import foto from '../../assets/foto.png'
 import './header.css'
 
 const Header = () => {
@@ -17,9 +16,7 @@ const Header = () => {
             <a href="https://wa.me/5493484372508" target="_blank" rel='noreferrer' className='link-socialMedia'><IoLogoWhatsapp/></a>
         </div>
 
-        <div className="img">
-            <img src={foto} alt="" />
-        </div>
+        
     </header>
   )
 }

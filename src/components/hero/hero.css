@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    align-items: center;
 }
 .description{
     display: flex;
@@ -45,4 +46,18 @@ h2{
 
 span{
     text-decoration: underline #4ee1a0;
+}
+
+.img__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55%;
+    background: rgb(36,36,36);
+    background: linear-gradient(0deg, rgba(36,36,36,1) 0%, rgba(36,36,36,0.01) 100%);
+} 
+
+img{
+    width: 100%;
+    
 }
