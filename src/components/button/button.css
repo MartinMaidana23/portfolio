@@ -1,0 +1,20 @@
+.btn{
+    letter-spacing: 2.3px;
+    background: none;
+    border:none;
+    margin: 15px;
+    font-size: 16px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #4ee1a0; 
+    transition: all 0.3s ease;   
+}
+
+.btn:hover{
+    padding-bottom: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.btn:focus{
+    background-color: #4ee1a0;
+}

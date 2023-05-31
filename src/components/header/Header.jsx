@@ -2,7 +2,7 @@
 import {AiFillGithub} from 'react-icons/ai'
 import {AiFillLinkedin} from 'react-icons/ai'
 import {IoLogoWhatsapp} from 'react-icons/io'
-import foto from '../../assets/foto.jpg'
+import foto from '../../assets/foto.png'
 import './header.css'
 
 const Header = () => {

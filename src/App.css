@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 .App{
     display: flex;
@@ -6,11 +11,7 @@
     height: 100vh;
 }
 
-.btn{
-    letter-spacing: 2.3px;
-    background: none;
-    border:none;
-    margin: 15px;
-    font-size: 16px;
-    text-decoration: underline #4ee1a0 2px;
+hr{
+    width: 100%;
+    border: 1px solid #fff;
 }
