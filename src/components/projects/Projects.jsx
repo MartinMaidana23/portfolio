@@ -9,7 +9,7 @@ const Projects = () => {
     <div className='projects' >
         <div className="title">
             <h2>Projects</h2>
-            <AnchorLink text='CONTACT ME' whereTo='#contact' />
+            <AnchorLink text={'CONTACT ME'} whereTo={'#contact'}/>
         </div>
         <div className="projects__container">
             {

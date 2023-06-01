@@ -18,6 +18,7 @@
 
 .card__img{
     width: 100%;
+    object-fit: contain;
 }
 
 .card__description{
@@ -31,9 +32,8 @@
 }
 
 .card__description h3{
-    font-size: 1.5rem;
+    font-size: 18px;
     letter-spacing: 1.5px;
-    
 }
 
 .card__subtitle{
@@ -44,7 +44,7 @@
 
 .card__subtitle p {
     color:#d9d9d9;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .card__link{
@@ -58,3 +58,38 @@
 .card__link a {
     margin: 0;
 }
+
+@media screen and (min-width:768px){
+    .card{
+        width: 48%;
+    }
+
+    .card__description h3{
+        font-size: 24px;
+    }
+
+    .card__subtitle p {
+        font-size: 18px;
+    }
+
+    .card__text{
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width:1440px){
+    .card{
+        width: 45%;
+    }
+
+    .card__description h3{
+        font-size: 32px;
+    }
+
+    .card__subtitle p {
+        font-size: 24px;
+    }
+
+    
+}
+

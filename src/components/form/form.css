@@ -1,5 +1,5 @@
 .form__container{
-    width: 95vw;
+    width: 80%;
     margin: 50px 10px;
 
 }
@@ -19,7 +19,11 @@
     border-bottom: 1px solid #fff ;
     padding: 15px;
     background:none;
+    font-family: 'Space Grotesk',sans-serif;
+}
 
+.form__input:focus{
+    outline: none;
 }
 
 .form__input::-webkit-input-placeholder {
@@ -36,15 +40,31 @@
     font-size: 16px;
     padding-bottom: 10px;
     border-bottom: 2px solid #4ee1a0; 
-    transition: all 0.3s ease;   
+    transition: all 0.3s ease;
+    font-family:'Space Grotesk',sans-serif;   
 }
 
 .btn:hover{
-    padding-bottom: 15px;
-    font-size: 20px;
     cursor: pointer;
+    transform: translateY(-5px);
 }
 
-.btn:focus{
-    background-color: #4ee1a0;
+@media screen and (min-width: 768px){
+    .form__input{
+        font-size: 24px;
+    }
+    .btn{
+        font-size: 18px;
+    }
 }
+
+@media screen and (min-width: 1440px){
+    
+    .form__input{
+        font-size: 32px;
+    }
+    .btn{
+        font-size: 24px;
+    }
+}
+    

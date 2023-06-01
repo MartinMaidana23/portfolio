@@ -10,9 +10,8 @@
 }
 
 .link:hover{
-    padding-bottom: 15px;
-    font-size: 20px;
     cursor: pointer;
+    transform: translateY(-5px);
 }
 
 .link:focus{

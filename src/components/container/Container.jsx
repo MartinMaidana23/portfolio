@@ -13,7 +13,9 @@ export const Container = () => {
           
         <Header/>
         <Hero/>
+        <hr />
         <Technologies/>
+        <hr />
         <Projects/> 
         <Contact/>
         <Footer/>
