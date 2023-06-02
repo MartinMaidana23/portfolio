@@ -60,7 +60,7 @@ span{
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 530px;
+    max-width: 50%;
     background: rgb(36,36,36);
     background: linear-gradient(0deg, rgba(36,36,36,1) 0%, rgba(36,36,36,0.01) 100%);
 } 
@@ -83,6 +83,7 @@ span{
     .img__container{
         position: absolute;
         height: 100%;
+        max-width: 530px;
         top: 0;
         right: 0;
         z-index: -1;

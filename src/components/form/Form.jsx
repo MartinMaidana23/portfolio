@@ -1,15 +1,31 @@
 import React from 'react'
 import './form.css'
 import Input from './Input'
+import useForm from '../hooks/useForm'
+import ClipLoader from 'react-spinners/ClipLoader'
+import Modal from '../modal/Modal'
 
-const Form = () => {
+const Form = (props) => {
+
+  const {initialForm} = props 
+  const {handleChange, handleSubmit, loading, modal} = useForm(initialForm)
+
+
   return (
     <div className='form__container' >
-        <form action="https://formspree.io/f/xnqoqjzq" method="POST" className='form'>
-          <Input type='text' name='name' placeholder='NAME' />
-          <Input type='email' name='email' placeholder='EMAIL' />
-          <Input type='text' name='message' placeholder='MESSAGE' />
-          <button className='btn'>SEND MESSAGE</button>
+        <form className='form' onSubmit={handleSubmit}>
+          {Object.entries(initialForm).map(([key], index)=>(
+            <Input
+            type={key==='text' ? 'text' : key==='email' ? 'email' : key==='phone' ? 'number' : 'text'}
+            name={key==='message' ? `${key}` : `user_${key}`}
+            placeholder={key.toUpperCase()}
+            onChange={handleChange}
+            key={index}
+            />
+          ))}
+          <Modal display={modal ? 'block' : 'none'} message={'Message sent successfully!'}/>
+          
+          <button className='btn'>{!loading &&'SEND MESSAGE'} {loading && <ClipLoader color={'#4ee1a0'}/>}</button>
         </form>
     </div>
   )
