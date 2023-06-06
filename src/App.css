@@ -16,3 +16,11 @@ hr{
     width: 95%;
     border: 1px solid #fff;
 }
+
+[data-visible="true"]{
+    opacity: 1;
+    transition: all 2s ease-in-out;
+}
+[data-visible="false"]{
+    opacity: 0.5;
+}
