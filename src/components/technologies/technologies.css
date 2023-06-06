@@ -1,3 +1,11 @@
+.technologies__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
 .technologies{
     display: flex;
     flex-direction: column;

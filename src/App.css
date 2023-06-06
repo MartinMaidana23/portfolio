@@ -17,10 +17,31 @@ hr{
     border: 1px solid #fff;
 }
 
-[data-visible="true"]{
-    opacity: 1;
-    transition: all 2s ease-in-out;
+/* .container{
+    position: relative;
 }
-[data-visible="false"]{
-    opacity: 0.5;
+
+.box {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #151515;
 }
+
+.a{
+    z-index: 1000;
+}
+
+.b{
+    z-index: 900;
+}
+
+.c{
+    z-index: 800;
+}
+
+.d{
+    z-index: 700;
+} */
