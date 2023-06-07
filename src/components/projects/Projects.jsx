@@ -15,12 +15,11 @@ const Projects = () => {
         const timeline = gsap.timeline({
             scrollTrigger: {
                 trigger: projectRef.current,
-                markers: true,
                 start: projectRef.current.scrollHeight / 3,
                 end: projectRef.current.scrollHeight,
                 scrub: 3,
             },
-        }).fromTo(projectRef.current, {opacity:0, duration: 2, y:1000, x:1000}, {opacity:1, duration: 2, y:0,x:0})
+        }).fromTo(projectRef.current, {opacity:0, duration: 2,x:-1000}, {opacity:1, duration: 2,x:0})
 
         return () => {
           gsap.killTweensOf(projectRef.current)

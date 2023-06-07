@@ -19,8 +19,8 @@ const Hero = () => {
             scrollTrigger: {
                 trigger: heroRef.current,
                 start: 'top top',
-                end: '+=1000 0%',
-                scrub: 2,
+                end: heroRef.current.scrollHeight / 2,
+                scrub: 3,
             },
         }).to(heroRef.current, {opacity:0, duration: 1, x:900,})
 
@@ -46,7 +46,7 @@ const Hero = () => {
             </div>
 
             <div className="description">
-                <p>Based in Argentina, I’m a full stack developer passionate about building accessible web apps that users love.</p>
+                <p>Based in Argentina, I’m a <span>full stack developer</span> passionate about building accessible web apps that users love.</p>
             </div>
             <div className="contact-link">
                 <AnchorLink
