@@ -1,33 +1,37 @@
-import React ,{useEffect} from 'react'
+import React ,{useEffect, useRef} from 'react'
 import AnchorLink from '../anchorlink/AnchorLink'
 import './hero.css'
 import foto from '../../assets/foto.png'
 import 'animate.css'
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
+import  gsap  from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 
 
 const Hero = () => {
 
-    const hero = document.querySelector('.hero')
-    gsap.registerPlugin(ScrollTrigger)
+    const heroRef = useRef(null)
+
     
     useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger)
         const timeline = gsap.timeline({
             scrollTrigger: {
-                trigger: hero,
-                markers: true,
+                trigger: heroRef.current,
                 start: 'top top',
                 end: '+=1000 0%',
-                scrub: 3,
+                scrub: 2,
             },
-        })
-        timeline.to(hero, {opacity:0, duration: 2, y:-500,})
+        }).to(heroRef.current, {opacity:0, duration: 1, x:900,})
+
+        return () => {
+            gsap.killTweensOf(heroRef.current)
+        }
+        
     }, [])
     
   return (
-    <div className={`hero box a`}>
+    <div className={`hero box a`} ref={heroRef}>
 
 
         <div className={"img__container"}>

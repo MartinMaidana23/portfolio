@@ -1,5 +1,26 @@
 [
     {
+        "technology": "React", 
+        "exp":"1 Year of Experience"
+    },
+    {
+        "technology": "NodeJS", 
+        "exp":"1 Year of Experience"
+    },
+    {
+        "technology": "JavaScript", 
+        "exp":"1 Year of Experience"
+    },
+    
+    {
+        "technology": "Express", 
+        "exp":"1 Year of Experience"
+    },
+    {
+        "technology": "MongoDB", 
+        "exp":"1 Year of Experience"
+    },
+    {
         "technology": "HTML", 
         "exp":"1 Year of Experience"
     },
@@ -9,26 +30,6 @@
     },
     {
         "technology": "SASS", 
-        "exp":"1 Year of Experience"
-    },
-    {
-        "technology": "JavaScript", 
-        "exp":"1 Year of Experience"
-    },
-    {
-        "technology": "React", 
-        "exp":"1 Year of Experience"
-    },
-    {
-        "technology": "NodeJS", 
-        "exp":"1 Year of Experience"
-    },
-    {
-        "technology": "Express", 
-        "exp":"1 Year of Experience"
-    },
-    {
-        "technology": "MongoDB", 
         "exp":"1 Year of Experience"
     }
 ]
