@@ -14,9 +14,8 @@ const Technologies = () => {
         const timeline = gsap.timeline({
             scrollTrigger: {
                 trigger: techRef.current,
-                start: 'top top',
-                markers: true,
-                end: 'bottom bottom',
+                start: '-30% 40%',
+                end: '10% 20%',
                 scrub: 2,
             },
         }).fromTo(techRef.current, 

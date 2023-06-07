@@ -17,8 +17,8 @@ const Projects = () => {
         const timeline = gsap.timeline({
             scrollTrigger: {
                 trigger: projectRef.current,
-                start: 'top top',
-                end: 'bottom botttom',
+                start: '-50% top',
+                end: '50% bottom',
                 scrub: 3,
             },
         }).fromTo(projectRef.current, 

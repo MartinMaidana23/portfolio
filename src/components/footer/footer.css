@@ -9,7 +9,7 @@
 
 .footer h2{
     font-weight: 400;
-    font-size: 24px;
+    font-size: 16px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -36,6 +36,11 @@
     .footer{
         width: 100vw;
         flex-direction: column-reverse;
+    }
+
+    .footer h2{
+        padding-bottom: 10px;
+
     }
 
     .footer .socialMedia{

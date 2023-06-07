@@ -11,6 +11,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 const Hero = () => {
 
     const heroRef = useRef(null)
+    const contentRef = useRef(null)
+    const imgRef = useRef(null)
 
     
     useEffect(() => {
@@ -18,24 +20,26 @@ const Hero = () => {
         const timeline = gsap.timeline({
             scrollTrigger: {
                 trigger: heroRef.current,
-                start: 'top top' ,
+                start: '33% top' ,
                 end: 'bottom bottom',
-                scrub: 2,
+                scrub: 5,
             },
-        }).to(heroRef.current, 
+        })
+        .to(contentRef.current, 
             {
                 opacity:0, 
-                duration: 5
+                duration: 5,
+                x: -300,
+            })
+        .to(imgRef.current, 
+            {
+                opacity:0,
+                duration: 5,
+                x: 300,
             })
 
-            const handleResize = () => {
-                timeline.invalidate()
-            }
-    
-            window.addEventListener('resize', handleResize)
 
         return () => {
-            window.removeEventListener('resize', handleResize)
             gsap.killTweensOf(heroRef.current)
         }
 
@@ -47,11 +51,11 @@ const Hero = () => {
     <div className={`hero box a`} ref={heroRef}>
 
 
-        <div className={"img__container"}>
+        <div className={"img__container"} ref={imgRef}>
             <img src={foto} alt="" />
         </div>
 
-        <div className="text__container">
+        <div className="text__container" ref={contentRef}>
 
             <div className="hello">
                 <h2>Nice to meet you!</h2>
