@@ -19,11 +19,19 @@ const Contact = () => {
         const timeline = gsap.timeline({
             scrollTrigger: {
                 trigger: contactRef.current,
-                start: contactRef.current.scrollHeight / 0.5,
-                end: contactRef.current.scrollHeight /0.3,
+                start: 'top top',
+                end: 'bottom bottom',
                 scrub: 2,
             },
-        }).fromTo(contactRef.current, {opacity:0, duration: 2, x:1000,}, {opacity:1, duration: 2, x:0,})
+        }).fromTo(contactRef.current, 
+          {
+            opacity:0, 
+            duration: 2, 
+          }, 
+          {
+            opacity:1, 
+            duration: 2, 
+          })
 
         return () => {
           gsap.killTweensOf(contactRef.current)

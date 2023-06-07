@@ -18,15 +18,28 @@ const Hero = () => {
         const timeline = gsap.timeline({
             scrollTrigger: {
                 trigger: heroRef.current,
-                start: 'top top',
-                end: heroRef.current.scrollHeight / 2,
-                scrub: 3,
+                start: 'top top' ,
+                end: 'bottom bottom',
+                scrub: 2,
             },
-        }).to(heroRef.current, {opacity:0, duration: 1, x:900,})
+        }).to(heroRef.current, 
+            {
+                opacity:0, 
+                duration: 5
+            })
+
+            const handleResize = () => {
+                timeline.invalidate()
+            }
+    
+            window.addEventListener('resize', handleResize)
 
         return () => {
+            window.removeEventListener('resize', handleResize)
             gsap.killTweensOf(heroRef.current)
         }
+
+        
         
     }, [])
     

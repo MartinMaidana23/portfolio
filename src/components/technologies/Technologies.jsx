@@ -14,11 +14,20 @@ const Technologies = () => {
         const timeline = gsap.timeline({
             scrollTrigger: {
                 trigger: techRef.current,
-                start: techRef.current.scrollHeight / 6,
-                end: techRef.current.scrollHeight ,
+                start: 'top top',
+                markers: true,
+                end: 'bottom bottom',
                 scrub: 2,
             },
-        }).fromTo(techRef.current, {opacity:0, duration: 2, x:500,}, {opacity:1, duration: 2, x:0,})
+        }).fromTo(techRef.current, 
+          {
+            opacity:0, 
+            duration: 2, 
+          }, 
+          {
+            opacity:1, 
+            duration: 2, 
+          })
 
         return () => {
           gsap.killTweensOf(techRef.current)

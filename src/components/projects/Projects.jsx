@@ -11,15 +11,27 @@ const Projects = () => {
 
     const projectRef = useRef(null)  
     useEffect(() => {
+
+        
       gsap.registerPlugin(ScrollTrigger)
         const timeline = gsap.timeline({
             scrollTrigger: {
                 trigger: projectRef.current,
-                start: projectRef.current.scrollHeight / 3,
-                end: projectRef.current.scrollHeight,
+                start: 'top top',
+                end: 'bottom botttom',
                 scrub: 3,
             },
-        }).fromTo(projectRef.current, {opacity:0, duration: 2,x:-1000}, {opacity:1, duration: 2,x:0})
+        }).fromTo(projectRef.current, 
+            {
+                opacity:0, 
+                duration: 2,
+            }, 
+            {
+                opacity:1,
+                duration: 2,
+            })
+
+            
 
         return () => {
           gsap.killTweensOf(projectRef.current)
