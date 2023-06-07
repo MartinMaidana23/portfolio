@@ -2,7 +2,6 @@ import React ,{useEffect, useRef} from 'react'
 import AnchorLink from '../anchorlink/AnchorLink'
 import './hero.css'
 import foto from '../../assets/foto.png'
-import 'animate.css'
 import  gsap  from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
