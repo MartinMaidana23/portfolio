@@ -5,42 +5,30 @@ import Card from '../card/Card'
 import projects from './projects.json'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import useGsap from '../hooks/useGsap'
 
 
 const Projects = () => {
 
-    const projectRef = useRef(null)  
-    useEffect(() => {
-
-        
-      gsap.registerPlugin(ScrollTrigger)
-        const timeline = gsap.timeline({
-            scrollTrigger: {
-                trigger: projectRef.current,
-                start: '-50% top',
-                end: '50% bottom',
-                scrub: 3,
-            },
-        }).fromTo(projectRef.current, 
-            {
-                opacity:0, 
-                duration: 2,
-            }, 
-            {
-                opacity:1,
-                duration: 2,
-            })
-
-            
-
-        return () => {
-          gsap.killTweensOf(projectRef.current)
-        }
-    }, [])
+    const {refEl} = useGsap(
+        '-30% 40%',
+        '10% 20%',
+        false,
+        3, 
+        [],
+        [],
+        [
+          {
+            target: '.projects__container',
+            from: {opacity:0,duration: 2, },
+            to: {opacity:1,duration: 2, }
+          }
+        ]
+    )
 
     
   return (
-    <div className='projects box c' ref={projectRef}>
+    <div className='projects' ref={refEl}>
         <div className="title" >
             <h2>Projects</h2>
             <AnchorLink text={'CONTACT ME'} whereTo={'#contact'}/>

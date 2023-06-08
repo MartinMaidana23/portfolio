@@ -2,59 +2,38 @@ import React ,{useEffect, useRef} from 'react'
 import AnchorLink from '../anchorlink/AnchorLink'
 import './hero.css'
 import foto from '../../assets/foto.png'
-import  gsap  from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import useGsap from '../hooks/useGsap'
 
 
 
 const Hero = () => {
 
-    const heroRef = useRef(null)
-    const contentRef = useRef(null)
-    const imgRef = useRef(null)
-
-    
-    useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger)
-        const timeline = gsap.timeline({
-            scrollTrigger: {
-                trigger: heroRef.current,
-                start: '33% top' ,
-                end: 'bottom bottom',
-                scrub: 5,
+    const {refEl, timeline} = useGsap(
+        '33% top',
+        'bottom bottom',
+        false,
+        5, 
+        [
+            {
+                target:'.text__container',
+                params:{opacity:0, x: -300}
             },
-        })
-        .to(contentRef.current, 
             {
-                opacity:0, 
-                duration: 5,
-                x: -300,
-            })
-        .to(imgRef.current, 
-            {
-                opacity:0,
-                duration: 5,
-                x: 300,
-            })
+                target:'.img__container',
+                params:{opacity:0,x: 300}
+            }
+        ])
 
-
-        return () => {
-            gsap.killTweensOf(heroRef.current)
-        }
-
-        
-        
-    }, [])
     
   return (
-    <div className={`hero box a`} ref={heroRef}>
+    <div className={`hero box a`} ref={refEl}>
 
 
-        <div className={"img__container"} ref={imgRef}>
+        <div className={"img__container"}>
             <img src={foto} alt="" />
         </div>
 
-        <div className="text__container" ref={contentRef}>
+        <div className="text__container">
 
             <div className="hello">
                 <h2>Nice to meet you!</h2>

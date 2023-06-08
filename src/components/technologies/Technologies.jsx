@@ -1,52 +1,41 @@
-import React, {useEffect, useRef}from 'react'
+import React from 'react'
 import technologies from './technologies.json'
 import Technology from './Technology'
-import { gsap } from 'gsap'
-import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 import './technologies.css'
+import useGsap from '../hooks/useGsap'
 
 const Technologies = () => {
 
-
-  const techRef = useRef(null)  
-  useEffect(() => {
-      gsap.registerPlugin(ScrollTrigger)
-        const timeline = gsap.timeline({
-            scrollTrigger: {
-                trigger: techRef.current,
-                start: '-30% 40%',
-                end: '10% 20%',
-                scrub: 2,
-            },
-        }).fromTo(techRef.current, 
-          {
-            opacity:0, 
-            duration: 2, 
-          }, 
-          {
-            opacity:1, 
-            duration: 2, 
-          })
-
-        return () => {
-          gsap.killTweensOf(techRef.current)
-        }
-    }, [])
-
+  const {refEl} = useGsap(
+    '-40% 40%',
+    '10% 20%',
+    false,
+    1, 
+    [],
+    [],
+    [
+      {
+        target: '.technologies',
+        from: {opacity:0,duration: 2},
+        to: {opacity:1,duration: 2}
+      }
+    ]
+  )
   
   return (
-    <div className='technologies__container box b' ref={techRef}>
+    <div className='technologies__container' ref={refEl}>
       <div className="technologies__title" >
         <h2>Technologies</h2>
       </div>
 
-      <div className={`technologies '} `} >
+      <div className={`technologies`} >
         {
-          technologies.map(({ technology, exp }, index) => (
+          technologies.map(({ technology, exp, hcolor }, index) => (
             <Technology 
               key={index}
               name={technology}
               exp={exp}
+              hcolor={hcolor}
             />
           ))
         }
