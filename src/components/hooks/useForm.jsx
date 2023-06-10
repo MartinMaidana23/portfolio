@@ -2,6 +2,7 @@ import {useState} from 'react'
 import emailjs from '@emailjs/browser'
 
 
+
 const useForm = (initialForm) => {
 
     
@@ -23,7 +24,7 @@ const useForm = (initialForm) => {
         setLoading(true)
 
         try {
-            await emailjs.sendForm('service_53roezu', "template_kanjjhc", e.target, 'V4CCjQKc_D0_yLP7-')
+            await emailjs.sendForm("service_53roezu", "template_kanjjhc", e.target, "V4CCjQKc_D0_yLP7-")
             .then((result) => {
 
                 if (result.status === 200) {
