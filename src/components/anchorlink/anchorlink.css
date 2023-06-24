@@ -8,7 +8,6 @@
     border-bottom: 2px solid #4ee1a0; 
     transition: all 0.3s ease;   
 }
-
 .link:hover{
     cursor: pointer;
     transform: translateY(-5px);
@@ -16,4 +15,10 @@
 
 .link:focus{
     background-color: #4ee1a0;
+}
+
+.link[aria-disabled="true"] {
+    color: #ccc;
+    border-bottom: 2px solid #ccc;
+    cursor: not-allowed;
 }

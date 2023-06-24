@@ -3,6 +3,20 @@
     padding: 0;
     box-sizing: border-box;
     color: #fff;
+
+}
+
+body::-webkit-scrollbar {
+    width: 10px;               
+}
+  
+body::-webkit-scrollbar-track {
+    background: #151515;        
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #4ee1a0; 
+    border-radius: 20px;       
 }
 
 .App{

@@ -8,17 +8,19 @@ const useGsap = (start, end, markers, scrub, to, from, fromTo) => {
 
     gsap.registerPlugin(ScrollTrigger);
 
+    const toContact = gsap.timeline({paused: true});
     useEffect(() => {
 
         timeline.current = gsap.timeline({
             scrollTrigger: {
-            trigger: refEl.current,
-            start: start,
-            end: end,
-            scrub: scrub,
-            markers: markers,
+                trigger: refEl.current,
+                start: start,
+                end: end,
+                scrub: scrub,
+                markers: markers,
             },
         });
+
 
 
         to?.map(({target, params}) => (timeline.current.to(target, params)));
@@ -34,7 +36,9 @@ const useGsap = (start, end, markers, scrub, to, from, fromTo) => {
     }, [start, end, markers, scrub, to, from]);
 
     return {
-        refEl
+        refEl,
+        timeline,
+        gsap,
     };
 };
 

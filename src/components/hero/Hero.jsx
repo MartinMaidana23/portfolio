@@ -8,25 +8,26 @@ import useGsap from '../hooks/useGsap'
 
 const Hero = () => {
 
-    const {refEl, timeline} = useGsap(
+    const {refEl, toContact} = useGsap(
         '33% top',
         'bottom bottom',
         false,
-        5, 
+        3, 
         [
             {
                 target:'.text__container',
-                params:{opacity:0, x: -300}
+                params:{opacity:0, x: -100}
             },
             {
                 target:'.img__container',
                 params:{opacity:0,x: 300}
             }
-        ])
+        ]
+    )
 
     
   return (
-    <div className={`hero box a`} ref={refEl}>
+    <div className={`hero`} ref={refEl}>
 
 
         <div className={"img__container"}>
@@ -47,6 +48,8 @@ const Hero = () => {
                 <AnchorLink
                     text='CONTACT ME'
                     whereTo='#contact'
+                    timeline={toContact}
+                    refEl={refEl}
                 />
             </div>
 

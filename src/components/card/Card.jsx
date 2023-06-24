@@ -13,8 +13,8 @@ const Card = (props) => {
           <h3 className='card__title'>{title}</h3>
           <div className="card__subtitle">
             {
-              texts.map((text)=>(
-                <p className='card__text'>{text}</p>
+              texts.map((text, index)=>(
+                <p className='card__text' key={index}>{text}</p>
               ))
             }
           </div>
@@ -22,8 +22,8 @@ const Card = (props) => {
         </div>
         <div className="card__link">
             {
-              btns.map(({text, whereTo})=>(
-                <AnchorLink text={text} whereTo={whereTo} />
+              btns.map(({text, whereTo, disabled},index )=>(
+                <AnchorLink text={text} whereTo={whereTo} disabled={disabled} key={index} />
               ))
             }
           </div>
