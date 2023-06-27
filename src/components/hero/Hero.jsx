@@ -1,6 +1,5 @@
-import React ,{useEffect, useRef} from 'react'
+import React from 'react'
 import AnchorLink from '../anchorlink/AnchorLink'
-import './hero.css'
 import foto from '../../assets/foto.webp'
 import useGsap from '../hooks/useGsap'
 
@@ -29,50 +28,59 @@ const Hero = (props) => {
 
     
   return (
-    <div className={`hero`} ref={refEl}>
+    <div className=
+     " hero p-4 flex flex-col gap-5 items-center overflow-hidden h-full md:flex-row md:flex-wrap md:relative md:min-h-[80vh] xl:m-0 xl:relative " 
+     ref={refEl}>
 
 
-        <div className={"img__container"}>
-            <img src={foto} alt="" />
+        <div className={
+            "img__container flex justify-center items-center m-w-[50%] md:absolute md:h-full md:max-w-xl top-0 right-0 -z-10 "
+            }>
+            <img src={foto} className='w-full grayscale' alt="" />
         </div>
 
-        <div className="text__container">
+        <div className="text__container md:flex md:flex-col md:items-center md:w-3/5 xl:items-center xl:justify-center xl:h-full xl:gap-5">
 
-            <div className="hello">
+            <div className=
+            "hello flex justify-center items-center flex-wrap mb-4 "
+            >
                 {lang==='en' ?
                 
                 <>
-                    <h2>Nice to meet you!</h2>
-                    <h2>I´m <span>Martin Maidana</span></h2>
+                    <h2 className='text-center font-bold text-4xl m-1 md:text-7xl md:text-left md:m-0 md:w-full xl:text-8xl' >Nice to meet you!</h2>
+                    <h2 className='text-center font-bold text-4xl m-1 md:text-7xl md:text-left md:m-0 md:w-full xl:text-8xl' >I´m <span className='underline' >Martin Maidana</span></h2>
                 </>
                 :
                 <>
-                    <h2>Un placer conocerte!</h2>
-                    <h2>Soy <span>Martin Maidana</span></h2>
+                    <h2 className='text-center font-bold text-3xl m-1 md:text-7xl md:text-left md:m-0 md:w-full xl:text-8xl' >Un placer conocerte!</h2>
+                    <h2 className='text-center font-bold text-3xl m-1 md:text-7xl md:text-left md:m-0 md:w-full xl:text-8xl' >Soy <span className='underline' >Martin Maidana</span></h2>
                 </>
                 }
                 
             </div>
 
-            <div className="description">
+            <div className=
+            "description flex justify-center items-center flex-wrap "
+            >
                 {lang==='en'
                     ?
                         <>
-                            <p>Based in Argentina, I’m a <span>Full Stack developer</span> passionate about building accessible web apps that users love.</p>
+                            <p className='text-center text-base font-medium m-0 text-[#d9d9d9] md:w-full md:text-lg md:text-left drop-shadow xl:text-2xl' >Based in Argentina, I’m a <span className='underline' >Full Stack developer</span> passionate about building accessible web apps that users love.</p>
                         </>
                     :
                         <>
-                            <p>Con base en Argentina, soy un <span>desarrollador Full Stack</span> apasionado por construir aplicaciones web accesibles que los usuarios amen.</p>
+                            <p className='text-center text-base font-medium m-0 text-[#d9d9d9] md:w-full md:text-lg md:text-left drop-shadow xl:text-2xl' >Con base en Argentina, soy un <span className='underline' >desarrollador Full Stack</span> apasionado por construir aplicaciones web accesibles que los usuarios amen.</p>
                         </>
                     }
                 
             </div>
-            <div className="contact-link">
+            <div className="contact-link flex justify-center items-center">
                 <AnchorLink
                     text={lang==='en' ? 'CONTACT ME': 'CONTACTAME'}
                     whereTo='#contact'
                     timeline={toContact}
                     refEl={refEl}
+                    className={'ml-0 xl:text-4xl'}
                 />
             </div>
 
