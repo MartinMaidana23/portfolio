@@ -1,11 +1,14 @@
 import './App.css'
 import { Container } from './components/container/Container'
+import LangProvider from './context/LangProvider'
 
 function App() {
 
   return (
     <div className="App">
-      <Container/>
+      <LangProvider>
+        <Container/>
+      </LangProvider>
     </div>
   )
 }

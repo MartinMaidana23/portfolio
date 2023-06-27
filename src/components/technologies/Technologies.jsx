@@ -1,10 +1,12 @@
 import React from 'react'
-import technologies from './technologies.json'
+import techs from './techs'
 import Technology from './Technology'
 import './technologies.css'
 import useGsap from '../hooks/useGsap'
 
-const Technologies = () => {
+const Technologies = (props) => {
+
+  const {lang} = props
 
   const {refEl} = useGsap(
     '-40% 40%',
@@ -25,17 +27,22 @@ const Technologies = () => {
   return (
     <div className='technologies__container' ref={refEl}>
       <div className="technologies__title" >
-        <h2>Technologies</h2>
+        <h2>
+          {
+              lang==='en' ? 'Technologies' : 'Tecnologias'
+          }
+        </h2>
       </div>
 
       <div className={`technologies`} >
         {
-          technologies.map(({ technology, exp, hcolor }, index) => (
+          techs.map(({ technology, exp, hcolor }, index) => (
             <Technology 
               key={index}
               name={technology}
               exp={exp}
               hcolor={hcolor}
+              lang={lang}
             />
           ))
         }

@@ -1,4 +1,6 @@
 /* import React from 'react' */
+import { useContext } from 'react'
+import { LangContext } from '../../context/LangProvider'
 import Contact from '../contact/Contact'
 import Footer from '../footer/Footer'
 import Header from '../header/Header'
@@ -10,18 +12,33 @@ import './container.css'
 
 export const Container = () => {
 
+  const {lang, setLang} = useContext(LangContext)
+
   return (
       <div className='container'>
           
         
-        <Header/>
-        <Hero/>
+        <Header
+          lang={lang}
+          setLang={setLang}
+        />
+        <Hero
+          lang={lang}
+        />
         <hr />
-        <Technologies/>
+        <Projects
+          lang={lang}
+        />
         <hr />
-        <Projects/> 
-        <Contact/>
-        <Footer/>
+        <Technologies
+          lang={lang}
+        />
+        <Contact
+          lang={lang}
+        />
+        <Footer
+          lang={lang}
+        />
           
       </div>
   )
