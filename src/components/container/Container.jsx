@@ -7,7 +7,6 @@ import Header from '../header/Header'
 import Hero from '../hero/Hero'
 import Projects from '../projects/Projects'
 import Technologies from '../technologies/Technologies'
-import './container.css'
 
 
 export const Container = () => {
@@ -15,7 +14,7 @@ export const Container = () => {
   const {lang, setLang} = useContext(LangContext)
 
   return (
-      <div className='container'>
+      <div className='container w-screen flex justify-center items-center flex-col'>
           
         
         <Header
