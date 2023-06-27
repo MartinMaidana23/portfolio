@@ -29,12 +29,12 @@ const Hero = (props) => {
     
   return (
     <div className=
-     " hero p-4 flex flex-col gap-5 items-center overflow-hidden h-full md:flex-row md:flex-wrap md:relative md:min-h-[80vh] xl:m-0 xl:relative " 
+     " hero p-4 flex flex-col gap-20 items-center overflow-hidden h-full md:flex-row md:flex-wrap md:relative md:min-h-[80vh] xl:m-0 xl:relative " 
      ref={refEl}>
 
 
         <div className={
-            "img__container flex justify-center items-center m-w-[50%] md:absolute md:h-full md:max-w-xl top-0 right-0 -z-10 "
+            "img__container flex justify-center items-center max-w-[50%] md:absolute md:h-full md:max-w-xl top-0 right-0 -z-10 "
             }>
             <img src={foto} className='w-full grayscale' alt="" />
         </div>
@@ -65,11 +65,11 @@ const Hero = (props) => {
                 {lang==='en'
                     ?
                         <>
-                            <p className='text-center text-base font-medium m-0 text-[#d9d9d9] md:w-full md:text-lg md:text-left drop-shadow xl:text-2xl' >Based in Argentina, I’m a <span className='underline' >Full Stack developer</span> passionate about building accessible web apps that users love.</p>
+                            <p className='text-center text-base font-medium m-0 text-[#d9d9d9] leading-7 md:w-full md:text-lg md:text-left drop-shadow xl:text-2xl xl:leading-10 xl:tracking-wider' >Based in Argentina, I’m a <span className='underline' >Full Stack developer</span> passionate about building accessible web apps that users love.</p>
                         </>
                     :
                         <>
-                            <p className='text-center text-base font-medium m-0 text-[#d9d9d9] md:w-full md:text-lg md:text-left drop-shadow xl:text-2xl' >Con base en Argentina, soy un <span className='underline' >desarrollador Full Stack</span> apasionado por construir aplicaciones web accesibles que los usuarios amen.</p>
+                            <p className='text-center text-base font-medium m-0 text-[#d9d9d9] leading-7 md:w-full md:text-lg md:text-left drop-shadow xl:text-2xl xl:leading-10 xl:tracking-wider' >Con base en Argentina, soy un <span className='underline' >desarrollador Full Stack</span> apasionado por construir aplicaciones web accesibles que los usuarios amen.</p>
                         </>
                     }
                 
