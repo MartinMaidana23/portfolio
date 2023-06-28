@@ -24,7 +24,7 @@ const Hero = (props) => {
             },
             {
                 target:'.img__container',
-                params:{opacity:0,x: 300}
+                params:{opacity:0}
             }
         ]
     )
