@@ -1,5 +1,4 @@
 import React, {useEffect, useRef} from 'react'
-import './projects.css'
 import AnchorLink from '../anchorlink/AnchorLink'
 import Card from '../card/Card'
 import projectsDev from './projectsDev'
@@ -28,12 +27,12 @@ const Projects = (props) => {
 
     
   return (
-    <div className='projects' ref={refEl}>
-        <div className="title" >
-            <h2>{ lang==='en' ? 'Projects' : 'Proyectos'}</h2>
-            <AnchorLink text={lang==='en' ? 'CONTACT ME': 'CONTACTAME'} whereTo={'#contact'}/>
+    <div className='projects flex flex-col items-center justify-center my-12 mx-2 w-screen xl:w-[85%]' ref={refEl}>
+        <div className="title mb-5 w-[95%] flex justify-between items-center md:w-[90%] xl:w-[85%]" >
+            <h2 className='text-[40px] font-bold md:text-7xl xl:text-[88px]' >{ lang==='en' ? 'Projects' : 'Proyectos'}</h2>
+            <AnchorLink className={'m-0 p-0 xl:text-3xl'} text={lang==='en' ? 'CONTACT ME': 'CONTACTAME'} whereTo={'#contact'}/>
         </div>
-        <div className={`projects__container '}`}  >
+        <div className={`projects__container md:flex md:justify-center md:flex-row md:flex-wrap md:w-[95%] md:gap-5 xl:gap-10`}  >
             {
                 projectsDev.map((project, index)=>(
                     <Card

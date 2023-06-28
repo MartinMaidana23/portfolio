@@ -14,7 +14,7 @@ const Header = () => {
       <div className="invisible h-5 w-screen bg-transparent">
         
       </div>
-      <header className="header flex justify-center items-center flex-col w-[50vw] gap-5 bg-[#151515] md:flex-row md:my-0 md:mx-5 md:p-5 md:w-screen md:justify-between md:fixed md:top-0 md:z-50 xl:justify-around xl:w-screen">
+      <header className="header flex justify-center items-center flex-col w-[50vw] gap-5  md:flex-row md:my-0 md:mx-5 md:p-5 md:w-screen md:justify-between md:fixed md:top-0 md:z-50 md:bg-zinc-950/95 md:backdrop-blur-sm xl:justify-around xl:w-screen">
           <h1 className='font-normal text-2xl md:text-3xl' >Martin Maidana</h1>
           <div className="socialMedia flex w-full justify-between items-center md:w-4/12 ">
               <button className='text-white text-[1.5rem]' onClick={handleLangChange} >{lang==='en' ? 'EN': 'ES'}</button>

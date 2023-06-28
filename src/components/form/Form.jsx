@@ -24,7 +24,7 @@ const Form = (props) => {
           ))}
           <Modal display={modal ? 'block' : 'none'} message={lang==='en'?'Message sent successfully!':'Mensaje enviado con exito!'}/>
           
-          <button className='btn bg-none m-4 no-underline border-solid border-b-2 hover:cursor-pointer hover:-translate-y-1 transition-all duration-300 md:text-lg xl:text-2xl active:translate-y-1'>{!loading && (lang==='en'?'SEND MESSAGE':'ENVIAR MENSAJE')} {loading && <ClipLoader color={'#4ee1a0'}/>}</button>
+          <button className='btn bg-none m-4 no-underline border-solid border-b-2 border-[#4ee1a0] hover:cursor-pointer hover:-translate-y-1 transition-all duration-300 md:text-lg xl:text-2xl active:translate-y-1'>{!loading && (lang==='en'?'SEND MESSAGE':'ENVIAR MENSAJE')} {loading && <ClipLoader color={'#4ee1a0'}/>}</button>
         </form>
     </div>
   )

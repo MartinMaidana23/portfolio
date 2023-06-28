@@ -33,7 +33,7 @@ const Contact = (props) => {
     <div className=
                 {`
 
-contact bg-[#242424] w-screen h-screen flex items-center justify-center flex-col
+contact bg-zinc-800 w-screen h-screen flex items-center justify-center flex-col
                 
                 `} 
     id='contact' ref={refEl}>

@@ -1,7 +1,6 @@
 import React from 'react'
 import techs from './techs'
 import Technology from './Technology'
-import './technologies.css'
 import useGsap from '../hooks/useGsap'
 
 const Technologies = (props) => {
@@ -25,16 +24,16 @@ const Technologies = (props) => {
   )
   
   return (
-    <div className='technologies__container' ref={refEl}>
+    <div className='technologies__container flex flex-col items-center justify-center' ref={refEl}>
       <div className="technologies__title" >
-        <h2>
+        <h2 className='text-[40px] font-bold mt-12 md:text-7xl xl:text-[88px]' >
           {
               lang==='en' ? 'Technologies' : 'Tecnologias'
           }
         </h2>
       </div>
 
-      <div className={`technologies`} >
+      <div className={`technologies flex flex-col items-center justify-center gap-5 p-4 m-4 w-full md:flex-row md:flex-wrap md:my-24 md:mx-0 md:w-4/5 md:min-h-[50vh] xl:w-[90%]`} >
         {
           techs.map(({ technology, exp, hcolor }, index) => (
             <Technology 

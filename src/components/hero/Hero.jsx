@@ -34,12 +34,12 @@ const Hero = (props) => {
 
 
         <div className={
-            "img__container flex justify-center items-center max-w-[50%] md:absolute md:h-full md:max-w-xl top-0 right-0 -z-10 "
+            "img__container flex justify-center items-center max-w-[50%] md:absolute md:h-full md:max-w-lg top-0 right-0 -z-10 "
             }>
             <img src={foto} className='w-full grayscale' alt="" />
         </div>
 
-        <div className="text__container md:flex md:flex-col md:items-center md:w-3/5 xl:items-center xl:justify-center xl:h-full xl:gap-5">
+        <div className="text__container md:flex md:flex-col md:items-start md:w-3/5 xl:items-center xl:justify-center xl:h-full xl:gap-5 ">
 
             <div className=
             "hello flex justify-center items-center flex-wrap mb-4 "
@@ -48,28 +48,28 @@ const Hero = (props) => {
                 
                 <>
                     <h2 className='text-center font-bold text-4xl m-1 md:text-7xl md:text-left md:m-0 md:w-full xl:text-8xl' >Nice to meet you!</h2>
-                    <h2 className='text-center font-bold text-4xl m-1 md:text-7xl md:text-left md:m-0 md:w-full xl:text-8xl' >I´m <span className='underline' >Martin Maidana</span></h2>
+                    <h2 className='text-center font-bold text-4xl m-1 md:text-7xl md:text-left md:m-0 md:w-full xl:text-8xl' >I´m <span className='underline decoration-[#4ee1a0]' >Martin Maidana</span></h2>
                 </>
                 :
                 <>
-                    <h2 className='text-center font-bold text-3xl m-1 md:text-7xl md:text-left md:m-0 md:w-full xl:text-8xl' >Un placer conocerte!</h2>
-                    <h2 className='text-center font-bold text-3xl m-1 md:text-7xl md:text-left md:m-0 md:w-full xl:text-8xl' >Soy <span className='underline' >Martin Maidana</span></h2>
+                    <h2 className='text-center font-bold text-3xl m-1 md:text-7xl md:text-left md:m-0 md:w-full xl:text-[88px]' >Un placer conocerte!</h2>
+                    <h2 className='text-center font-bold text-3xl m-1 md:text-7xl md:text-left md:m-0 md:w-full xl:text-[88px]' >Soy <span className='underline decoration-[#4ee1a0]' >Martin Maidana</span></h2>
                 </>
                 }
                 
             </div>
 
             <div className=
-            "description flex justify-center items-center flex-wrap "
+            "description flex justify-center items-center flex-wrap"
             >
                 {lang==='en'
                     ?
                         <>
-                            <p className='text-center text-base font-medium m-0 text-[#d9d9d9] leading-7 md:w-full md:text-lg md:text-left drop-shadow xl:text-2xl xl:leading-10 xl:tracking-wider' >Based in Argentina, I’m a <span className='underline' >Full Stack developer</span> passionate about building accessible web apps that users love.</p>
+                            <p className='text-center text-base font-medium m-0 text-[#d9d9d9] leading-7 md:w-full md:text-lg md:text-left drop-shadow xl:text-2xl xl:leading-10 xl:tracking-wider' >Based in Argentina, I’m a <span className='underline decoration-[#4ee1a0]' >Full Stack developer</span> passionate about building accessible web apps that users love.</p>
                         </>
                     :
                         <>
-                            <p className='text-center text-base font-medium m-0 text-[#d9d9d9] leading-7 md:w-full md:text-lg md:text-left drop-shadow xl:text-2xl xl:leading-10 xl:tracking-wider' >Con base en Argentina, soy un <span className='underline' >desarrollador Full Stack</span> apasionado por construir aplicaciones web accesibles que los usuarios amen.</p>
+                            <p className='text-center text-base font-medium m-0 text-[#d9d9d9] leading-7 md:w-full md:text-lg md:text-left drop-shadow xl:text-2xl xl:leading-10 xl:tracking-wider' >Con base en Argentina, soy un <span className='underline decoration-[#4ee1a0]' >desarrollador Full Stack</span> apasionado por construir aplicaciones web accesibles que los usuarios amen.</p>
                         </>
                     }
                 

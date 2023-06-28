@@ -24,11 +24,9 @@ export const Container = () => {
         <Hero
           lang={lang}
         />
-        <hr />
         <Projects
           lang={lang}
         />
-        <hr />
         <Technologies
           lang={lang}
         />
