@@ -1,6 +1,7 @@
 /* import React from 'react' */
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import { LangContext } from '../../context/LangProvider'
+import ClipLoader from 'react-spinners/ClipLoader'
 import Contact from '../contact/Contact'
 import Footer from '../footer/Footer'
 import Header from '../header/Header'
@@ -12,33 +13,48 @@ import Technologies from '../technologies/Technologies'
 export const Container = () => {
 
   const {lang, setLang} = useContext(LangContext)
+  const [loaded, setLoaded] = useState(false)
+
+  addEventListener('load', () => {
+    setTimeout(() => {
+      setLoaded(true)
+    }, 3000)
+})
 
   return (
+
+    !loaded
+    ?
+      <div className='h-screen flex items-center justify-center'>
+        <ClipLoader color='#4ee1a0' size={100} />
+      </div>
+    
+    :
+
       <div className='container w-screen flex justify-center items-center flex-col'>
-          
-        
-        <Header
+
+          <Header
           lang={lang}
           setLang={setLang}
-        />
-        <Hero
-          lang={lang}
-        />
-        <Projects
-          lang={lang}
-        />
-        <Technologies
-          lang={lang}
-        />
-        <hr className='border-zinc-400' />
-        <Contact
-          lang={lang}
-        />
-        <Footer
-          lang={lang}
-        />
-          
+          />
+          <Hero
+            lang={lang}
+          />
+          <Projects
+            lang={lang}
+          />
+          <Technologies
+            lang={lang}
+          />
+          <hr className='border-zinc-400' />
+          <Contact
+            lang={lang}
+          />
+          <Footer
+            lang={lang}
+          />
       </div>
+      
   )
 }
 

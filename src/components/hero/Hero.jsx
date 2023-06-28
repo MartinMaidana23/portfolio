@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import AnchorLink from '../anchorlink/AnchorLink'
+import ClipLoader from 'react-spinners/ClipLoader'
 import foto from '../../assets/foto.webp'
 import useGsap from '../hooks/useGsap'
 
@@ -8,6 +9,8 @@ import useGsap from '../hooks/useGsap'
 const Hero = (props) => {
 
     const {lang} = props
+
+    
 
     const {refEl, toContact} = useGsap(
         '33% top',
@@ -28,6 +31,8 @@ const Hero = (props) => {
 
     
   return (
+
+    
     <div className=
      " hero p-4 flex flex-col gap-20 items-center overflow-hidden h-full md:flex-row md:flex-wrap md:relative md:min-h-[80vh] xl:m-0 xl:relative " 
      ref={refEl}>
