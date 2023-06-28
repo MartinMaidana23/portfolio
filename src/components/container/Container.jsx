@@ -30,6 +30,7 @@ export const Container = () => {
         <Technologies
           lang={lang}
         />
+        <hr className='border-zinc-400' />
         <Contact
           lang={lang}
         />
