@@ -15,11 +15,9 @@ export const Container = () => {
   const {lang, setLang} = useContext(LangContext)
   const [loaded, setLoaded] = useState(false)
 
-  addEventListener('load', () => {
-    setTimeout(() => {
-      setLoaded(true)
-    }, 3000)
-})
+  setTimeout(() => {
+    setLoaded(true)
+  }, 3000);
 
   return (
 
@@ -31,7 +29,7 @@ export const Container = () => {
     
     :
 
-      <div className='container w-screen flex justify-center items-center flex-col'>
+      <div className='container w-screen flex justify-between items-center flex-col'>
 
           <Header
           lang={lang}
