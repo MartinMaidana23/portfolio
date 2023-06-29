@@ -34,7 +34,7 @@ const Hero = (props) => {
 
     
     <div className=
-     " hero p-4 flex flex-col gap-20 items-center overflow-hidden h-full md:flex-row md:flex-wrap md:relative md:min-h-[80vh] xl:mt-20 xl:m-0 xl:relative " 
+     " hero p-4 flex flex-col gap-20 items-center overflow-hidden h-screen md:flex-row md:flex-wrap md:h-screen md:relative xl:relative " 
      ref={refEl}>
 
 

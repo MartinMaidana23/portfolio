@@ -38,6 +38,7 @@ export const Container = () => {
           <Hero
             lang={lang}
           />
+          <hr className='border-zinc-400' />
           <Projects
             lang={lang}
           />
