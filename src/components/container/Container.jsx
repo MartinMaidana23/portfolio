@@ -21,14 +21,6 @@ export const Container = () => {
 
   return (
 
-    !loaded
-    ?
-      <div className='h-screen flex items-center justify-center'>
-        <ClipLoader color='#4ee1a0' size={100} />
-      </div>
-    
-    :
-
       <div className='container w-screen flex justify-between items-center flex-col'>
 
           <Header
