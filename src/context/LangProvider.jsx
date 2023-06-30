@@ -4,7 +4,9 @@ export const LangContext = createContext()
 
 const LangProvider = ({children}) => {
 
-    const [lang, setLang] = useState('en')
+
+    const [lang, setLang] = useState(window.navigator.language.slice(0,2) || 'en')
+
     const handleLangChange = () => {
       const newLang = lang === 'es' ? 'en' : 'es'
       setLang(newLang)
