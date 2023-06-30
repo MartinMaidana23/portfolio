@@ -13,12 +13,7 @@ import Technologies from '../technologies/Technologies'
 export const Container = () => {
 
   const {lang, setLang} = useContext(LangContext)
-  const [loaded, setLoaded] = useState(false)
-
-  setTimeout(() => {
-    setLoaded(true)
-  }, 3000);
-
+ 
   return (
 
       <div className='container w-screen flex justify-between items-center flex-col'>
