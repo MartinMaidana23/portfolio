@@ -23,9 +23,9 @@ const Header = () => {
           </div>
           <div className="socialMedia flex w-full justify-between items-center md:w-4/12 ">
               <button className='text-white text-[1.5rem] border-b-2 border-[#4ee1a0] hover:-translate-y-1 active:translate-y-3 transition-all duration-500' onClick={handleLangChange} >{lang==='en' ? 'EN': 'ES'}</button>
-              <a href="https://github.com/MartinMaidana23" target="_blank" rel="noreferrer" className='link-socialMedia text-white text-[2rem]' ><AiFillGithub/></a>
-              <a href="https://www.linkedin.com/in/martin--maidana/" target="_blank" rel='noreferrer' className='link-socialMedia text-white text-[2rem]'><AiFillLinkedin/></a>
-              <a href="https://wa.me/5493484372508" target="_blank" rel='noreferrer' className='link-socialMedia text-white text-[2rem]'><IoLogoWhatsapp/></a>
+              <a href="https://github.com/MartinMaidana23" target="_blank" rel="noreferrer" className='link-socialMedia text-white text-[2rem] p-1 rounded-xl hover:bg-[#333] transition-all' ><AiFillGithub/></a>
+              <a href="https://www.linkedin.com/in/martin--maidana/" target="_blank" rel='noreferrer' className='link-socialMedia text-white text-[2rem] p-1 rounded-xl hover:bg-[#0e76a8] transition-all'><AiFillLinkedin/></a>
+              <a href="https://wa.me/5493484372508" target="_blank" rel='noreferrer' className='link-socialMedia text-white text-[2rem] p-1 rounded-xl hover:bg-[#25D366] transition-all'><IoLogoWhatsapp/></a>
           </div>
       </header>
     </>
