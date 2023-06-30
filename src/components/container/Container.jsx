@@ -13,21 +13,8 @@ import Technologies from '../technologies/Technologies'
 export const Container = () => {
 
   const {lang, setLang} = useContext(LangContext)
-  const [loaded, setLoaded] = useState(false)
-
-  setTimeout(() => {
-    setLoaded(true)
-  }, 3000);
-
+ 
   return (
-
-    !loaded
-    ?
-      <div className='h-screen flex items-center justify-center'>
-        <ClipLoader color='#4ee1a0' size={100} />
-      </div>
-    
-    :
 
       <div className='container w-screen flex justify-between items-center flex-col'>
 
