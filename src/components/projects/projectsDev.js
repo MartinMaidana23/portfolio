@@ -3,15 +3,7 @@ import teslaLandingImg from "../../assets/teslalanding.avif"
   
   
 const projects =[
-    {
-        title:["Congelados Escobar E-Commerce | Final bootcamp proyect ", "E-Commerce Congelados Escobar | Proyecto final del bootcamp"],
-        texts:["HTML", "CSS", "JS", "Node.js", "Express.js", "MongoDb"],
-        btns:[
-                {"text":["VIEW PROJECT", "VER PROYECTO"],"disabled":true},
-                {"text":["VIEW CODE", "VER CODIGO"], "whereTo":"https://github.com/MartinMaidana23/proyecto-final"}
-            ],
-        img:todoListImg
-    },
+    
     {
         title:["Todo List for Maidana Propiedades", "Lista de tareas para Maidana Propiedades"],
         texts:["HTML", "CSS", "JS", "React.Js"],
